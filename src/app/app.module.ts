@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { MatNativeDateModule } from '@angular/material/core';
 
+import { StoreModule } from '@ngrx/store';
+import { calendarReducer } from './stores/calendar.reducer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +25,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormsModule,
     MatInputModule,
     MatNativeDateModule,
+
+    StoreModule.forRoot({}),
+    StoreModule.forFeature("events", calendarReducer)
   ],
   providers: [],
   bootstrap: [AppComponent]
