@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { MatSelectModule } from '@angular/material/select';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -7,6 +8,9 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [
+        MatSelectModule,
+      ]
     }).compileComponents();
   });
 
