@@ -1,27 +1,36 @@
 :host {
-	.calendar {
-		display: grid;
-		grid-template-columns: 40px repeat(7, 1fr);
-		grid-template-rows: 24px repeat(24, 60px);
-		width: 1200px;
-		margin: auto;
+  .container {
+    width: 1200px;
+    position: relative;
+    margin: auto;
+  }
+  .calendar {
+    display: grid;
+    grid-template-columns: 38px repeat(7, 1fr);
+    grid-template-rows: 24px repeat(24, 60px);
 
-		.calendar-day {
-			border-bottom: 1px solid lightgray;
-			text-align: center;
-			&:first-child {
-				grid-column-start: 2;
-			}
-		}
-		.calendar-cell {
-			border-right: 1px solid lightgray;
-			border-bottom: 1px dashed lightgray;
-		}
-		.calendar-hour {
-			border-right: 1px solid lightgray;
-			text-align: right;
-			padding-right: 8px;
-    	padding-top: 52px;
-		}
-	}
+    .calendar-day {
+      border-bottom: 1px solid lightgray;
+      text-align: center;
+      &:first-child {
+        grid-column-start: 2;
+      }
+    }
+    .calendar-cell {
+      border-right: 1px solid lightgray;
+      border-bottom: 1px dashed lightgray;
+    }
+    .calendar-hour {
+      border-right: 1px solid lightgray;
+      text-align: right;
+      padding-right: 8px;
+      padding-top: 52px;
+    }
+    .calendar-event {
+      position: absolute;
+      background-color: red;
+      width: 160px;
+      height: 60px;
+    }
+  }
 }
