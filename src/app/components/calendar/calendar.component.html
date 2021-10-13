@@ -1,0 +1,13 @@
+<section class="calendar">
+	<div *ngFor="let day of days; trackBy: trackByDay" class="calendar-day">{{day | date }}</div>
+	<ng-template ngFor [ngForOf]="hours" let-hour>
+		<div class="calendar-hour">{{hour}}</div>
+		<div class="calendar-cell"></div>
+		<div class="calendar-cell"></div>
+		<div class="calendar-cell"></div>
+		<div class="calendar-cell"></div>
+		<div class="calendar-cell"></div>
+		<div class="calendar-cell"></div>
+		<div class="calendar-cell"></div>
+	</ng-template>
+</section>
