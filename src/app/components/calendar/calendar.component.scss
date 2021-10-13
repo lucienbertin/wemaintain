@@ -3,6 +3,8 @@
 		display: grid;
 		grid-template-columns: 40px repeat(7, 1fr);
 		grid-template-rows: 24px repeat(24, 60px);
+		width: 1200px;
+		margin: auto;
 
 		.calendar-day {
 			border-bottom: 1px solid lightgray;
